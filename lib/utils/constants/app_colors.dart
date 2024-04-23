@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const canvasColor =
-      Color.fromARGB(255, 186, 190, 201); //Color(0xFFE5E5E5);
+  static const canvasColor = Colors.white; //Color(0xFFE5E5E5);
   static const accentColor = Color(0xFF2C7275);
   static const outerBorderColor = Color(0xFFDBDBDB);
   static const borderColor = Color(0xFF50586A);
@@ -37,5 +36,5 @@ class AppColors {
   static const textFieldBorderColor = Color(0xFF0B236A);
   static const textFieldFillColor = Color(0xFF1F2937);
 
-  static const buttonFillColor = Color(0xFF6366F1);
+  static const buttonFillColor = Color(0xFF2D5C3A);
 }
