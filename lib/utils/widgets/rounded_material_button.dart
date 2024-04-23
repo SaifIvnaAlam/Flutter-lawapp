@@ -17,7 +17,7 @@ class RoundedMaterialButton extends StatelessWidget {
     this.height = 60,
     this.width = double.infinity,
     this.color = Colors.black,
-    this.radius = 100,
+    this.radius = 10,
     this.buttonType = RoundedButtonType.gradient,
     this.showIcon = true,
     this.icon = Icons.camera,
@@ -59,10 +59,10 @@ class RoundedMaterialButton extends StatelessWidget {
               Text(text,
                   style: TextStyle(
                     color: buttonType == RoundedButtonType.gradient
-                        ? Colors.black
+                        ? Colors.white
                         : Colors.white,
                     fontSize:
-                        buttonType == RoundedButtonType.gradient ? 20 : 30,
+                        buttonType == RoundedButtonType.gradient ? 15 : 20,
                     fontWeight: FontWeight.w900,
                   )),
               widthBox12,
