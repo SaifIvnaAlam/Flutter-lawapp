@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "699634201108",
+    "project_id": "lawcompass-b587e",
+    "storage_bucket": "lawcompass-b587e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:699634201108:android:42c77bdd1624adf1172d01",
+        "android_client_info": {
+          "package_name": "com.example.lawapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd2nhHUKrGZH0I-6Oa8O2Ta4RA8ixzG1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

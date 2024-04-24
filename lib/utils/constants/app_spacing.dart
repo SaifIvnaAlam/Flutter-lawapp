@@ -16,3 +16,13 @@ const widthBox8 = SizedBox(width: 8);
 const widthBox12 = SizedBox(width: 12);
 const widthBox16 = SizedBox(width: 16);
 const widthBox24 = SizedBox(width: 24);
+
+//Device Height
+double deviceHeight(context) {
+  return MediaQuery.of(context).size.height;
+}
+
+//Device Width
+double deviceWidth(context) {
+  return MediaQuery.of(context).size.width;
+}
