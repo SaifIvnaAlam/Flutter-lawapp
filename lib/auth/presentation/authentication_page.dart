@@ -1,13 +1,13 @@
+import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:lawapp/utils/routes/route_name.dart';
 import 'package:lawapp/utils/constants/app_assets.dart';
 import 'package:lawapp/utils/constants/app_spacing.dart';
 import 'package:lawapp/utils/constants/app_strings.dart';
 import 'package:lawapp/utils/constants/app_text_Style.dart';
-import 'package:lawapp/utils/routes/route_name.dart';
 import 'package:lawapp/utils/widgets/primary_scaffold.dart';
 import 'package:lawapp/utils/widgets/rounded_material_button.dart';
-import 'package:lottie/lottie.dart';
 
 class AuthenticationPage extends StatelessWidget {
   const AuthenticationPage({super.key});
@@ -33,7 +33,7 @@ class AuthenticationPage extends StatelessWidget {
           Lottie.asset(AppAssets.catAnimation),
           RoundedMaterialButton(
             ontap: () {
-              context.pushReplacement(AppRoutes.NAVBAR);
+              context.pushReplacement(AppRoutes.HOME_PAGE);
             },
             text: 'Continue with Google',
             showIcon: false,

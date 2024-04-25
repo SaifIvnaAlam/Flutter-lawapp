@@ -12,7 +12,7 @@ final goRouter = GoRouter(
   routes: [
     GoRoute(
       path: AppRoutes.HOME_PAGE,
-      builder: (context, state) => const HomePage(),
+      builder: (context, state) => HomePage(),
     ),
     GoRoute(
       path: AppRoutes.INITIAL_ROUTE,

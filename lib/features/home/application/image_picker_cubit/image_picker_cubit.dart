@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:image_picker/image_picker.dart';
 
 part 'image_picker_cubit.freezed.dart';
 part 'image_picker_state.dart';
@@ -18,5 +18,9 @@ class ImagePickerCubit extends Cubit<ImagePickerState> {
     } else {
       emit(const ImagePickerState.notPicked());
     }
+  }
+
+  Future<void> removeImage() async {
+    emit(ImagePickerState.notPicked());
   }
 }
