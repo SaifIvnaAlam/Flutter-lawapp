@@ -1,12 +1,14 @@
 import 'package:lottie/lottie.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lawapp/utils/routes/route_name.dart';
 import 'package:lawapp/utils/constants/app_assets.dart';
 import 'package:lawapp/utils/constants/app_spacing.dart';
 import 'package:lawapp/utils/constants/app_strings.dart';
 import 'package:lawapp/utils/constants/app_text_Style.dart';
 import 'package:lawapp/utils/widgets/primary_scaffold.dart';
+import 'package:lawapp/auth/application/cubit/auth_cubit.dart';
 import 'package:lawapp/utils/widgets/rounded_material_button.dart';
 
 class AuthenticationPage extends StatelessWidget {
@@ -33,7 +35,17 @@ class AuthenticationPage extends StatelessWidget {
           Lottie.asset(AppAssets.catAnimation),
           RoundedMaterialButton(
             ontap: () {
-              context.pushReplacement(AppRoutes.HOME_PAGE);
+              context.read<AuthCubit>().signInWithGoogle();
+              BlocListener<AuthCubit, AuthState>(
+                listener: (context, state) => state.when(
+                  initial: () => null,
+                  authenticated: (user) =>
+                      context.pushReplacement(AppRoutes.HOME_PAGE),
+                  unathenticated: () =>
+                      const SnackBar(content: Text("Not Loged in")),
+                ),
+              );
+              // context.pushReplacement(AppRoutes.HOME_PAGE);
             },
             text: 'Continue with Google',
             showIcon: false,

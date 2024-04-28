@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:lawapp/injection.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lawapp/utils/routes/go_router.dart';
+import 'package:lawapp/auth/infrastructure/auth_facade.dart';
+import 'package:lawapp/auth/application/cubit/auth_cubit.dart';
 import 'package:lawapp/features/home/application/chat_cubit/chat_cubit.dart';
 import 'package:lawapp/features/home/application/image_picker_cubit/image_picker_cubit.dart';
 
@@ -14,6 +17,7 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => ImagePickerCubit()),
         BlocProvider(create: (context) => ChatCubit()),
+        BlocProvider(create: (context) => getIt<AuthCubit>()),
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,

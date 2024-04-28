@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lawapp/features/home/application/chat_cubit/chat_cubit.dart';
-import 'package:lawapp/features/home/application/image_picker_cubit/image_picker_cubit.dart';
-import 'package:lawapp/features/home/presentation/components/text_field.dart';
 import 'package:lawapp/utils/constants/app_colors.dart';
 import 'package:lawapp/utils/constants/app_radius.dart';
 import 'package:lawapp/utils/constants/app_spacing.dart';
 import 'package:lawapp/utils/widgets/primary_scaffold.dart';
 import 'package:lawapp/utils/widgets/rounded_icon_button.dart';
+import 'package:lawapp/features/home/application/chat_cubit/chat_cubit.dart';
+import 'package:lawapp/features/home/presentation/components/text_field.dart';
+import 'package:lawapp/features/home/application/image_picker_cubit/image_picker_cubit.dart';
 
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
@@ -85,7 +85,7 @@ class HomePage extends StatelessWidget {
                                                           maxLines:
                                                               null, // Set to null for unlimited lines
                                                         ),
-                                                )
+                                                ),
                                               ],
                                             ),
                                           ],
